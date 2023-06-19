@@ -1,7 +1,14 @@
+import styled from '@emotion/styled'
+
+const Heading = styled.h1`
+  font-family: 'Lato', sans-serif;
+  color: #FFF;
+`
+
 function App () {
   return (
     <div className='App'>
-      <h1>Hola mundo desde App</h1>
+      <Heading>Hola mundo desde App</Heading>
     </div>
   )
 }
