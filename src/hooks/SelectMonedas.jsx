@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import styled from '@emotion/styled'
 
 const Label = styled.label`
@@ -18,8 +17,7 @@ const Select = styled.select`
   border-radius: 10px;
 `
 
-function SelectMonedas ({ label, opciones }) {
-  const [moneda, setMoneda] = useState('')
+function SelectMonedas ({ label, opciones, moneda, setMoneda }) {
   return (
     <>
       <Label> {label} </Label>
