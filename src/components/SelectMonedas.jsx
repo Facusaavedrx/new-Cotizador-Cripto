@@ -25,7 +25,7 @@ function SelectMonedas ({ label, opciones, moneda, setMoneda }) {
         value={moneda}
         onChange={e => setMoneda(e.target.value)}
       >
-        <option value=''>Nombre:</option>
+        <option value=''>Seleccionar: </option>
         {opciones.map(opcion => {
           return (
             <option value={opcion.id} key={opcion.id}> {opcion.nombre} </option>
