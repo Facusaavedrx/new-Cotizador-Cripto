@@ -24,7 +24,7 @@ const InputSubmit = styled.input`
   }
 `
 
-function Formulario () {
+function Formulario ({ setMonedas }) {
   const [moneda, setMoneda] = useState('')
   const [criptos, setCriptos] = useState([])
   const [cripto, setCripto] = useState('')
@@ -52,12 +52,15 @@ function Formulario () {
   const handleSubmit = e => {
     e.preventDefault()
     if ([moneda, cripto].includes('')) {
-      console.log('Error')
       setError(true)
+      setMonedas({})
       return
     }
     setError(false)
-    console.log({ moneda, cripto })
+    setMonedas({
+      moneda,
+      cripto
+    })
   }
   return (
     <>
